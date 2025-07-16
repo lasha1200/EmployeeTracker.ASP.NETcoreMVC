@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model FinalProject.ASP.NETcoreMVC.Models.Employee
+@{
+    ViewData["Title"] = "Add Employee";
+}
+<h2 class="p-2">Add Employee</h2>
+
+
+
+<form asp-action="AddEmployeeForm" asp-asp-controller="Home">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <label>First Name</label>
+    <input asp-for="FirstName" class="form-control" placeholder="First Name"/>
+    <span asp-validation-form="FirstName"></span>
+    <label class="mt-5">Last Name</label>
+    <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+    <span asp-validation-form="LastName"></span>
+    <label class="mt-5">Date of Birth</label>
+    <input asp-for="BirthDate" class="form-control" placeholder="DOB" />
+    <label class="mt-5">Hire Date</label>
+    <input asp-for="HireDate" class="form-control" placeholder="DOH" />
+    <label class="mt-5">Manager</label>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+    <button class="btn btn-secondary" type="reset">Cancel</button>
+    
+</form>

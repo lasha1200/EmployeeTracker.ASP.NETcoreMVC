@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<QuarterlySales>
+<div class="text-left">
+    <h1 class="display-14">Quarterly Sales</h1>
+    <table class="table table-striped mt-3">
+    <thead>
+        <tr>
+    <th>Year</th>
+    <th>Quarter</th>
+    <th>Employee</th>
+    <th>Amount</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       @{
+                foreach(var sales in Model)
+                {
+                   <tr>
+                   <td>
+                   @sales.Year
+                   </td>
+                   <td>
+                   @sales.Quarter
+                   </td>
+                   <td>
+                   @sales.Employee.ToString()
+                   </td>
+                   <td>
+                   $@sales.Amount
+                   </td
+                   </tr> 
+                }
+
+        }
+    </tbody>
+   
+</table>
+
+
+</div>
